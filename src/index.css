@@ -10,12 +10,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
+ 
 
-  background: url("./assets/images/react.png.webp");
+  /*background: url("./assets/images/react.png.webp");*/
+  background-color: rgb(224, 224, 224) !important;
+
 }
-
-
 
 
 code {

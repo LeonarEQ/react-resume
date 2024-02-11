@@ -1,8 +1,10 @@
 import "./App.css";
-
 import { Container, Grid } from "@mui/material";
 import Header from "./components/Header/Header";
-
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Resume from "./pages/Resume/Resume";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Route } from "react-router-dom";
 import Profile from "./components/Profile/Profile";
 
 function App() {
@@ -13,7 +15,16 @@ function App() {
           <Profile />
         </Grid>
         <Grid item xs>
-        <Header />
+          <BrowserRouter>
+            <Route path="/">
+              <Header />
+              <Resume />
+            </Route>
+            <Route path="/portfolio">
+              <Portfolio />
+            </Route>
+          </BrowserRouter>
+          <Footer />
         </Grid>
       </Grid>
     </Container>
@@ -21,5 +32,3 @@ function App() {
 }
 
 export default App;
-
-/**/ 
