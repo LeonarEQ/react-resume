@@ -11,31 +11,9 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 import { withRouter } from "react-router";
-
-/*import {
-  HomeRounded,
-  SchoolRounded,
-  WorkRounded,
-  Facebook,
-  Twitter,
-  LinkedIn,
-  GitHub,
-  Telegram,
-} from "@material-ui/icons";*/
-
-/*import {
-  HomeRounded,
-  SchoolRounded,
-  WorkRounded,
-  Facebook,
-  Twitter,
-  LinkedIn,
-  GitHub,
-  Telegram,
-} from "@mui/icons-material";*/
-
 import resumeData from "../../utils/resumeData";
 import CustomButton from "../Button/Button";
+import TelegramIcon from "@mui/icons-material/Telegram";
 import "./Header.css";
 
 const Header = (props) => {
@@ -55,22 +33,22 @@ const Header = (props) => {
         <Nav className="header_left">
           {/* Resume Link*/}
           <Nav.Link
-            //as={NavLink}
+            as={NavLink}
             to="/"
             className={pathName == "/" ? "header_link_active" : "header_link"}
           >
-            Resume
+            Resume page
           </Nav.Link>
 
           {/* Portfolio Link*/}
           <Nav.Link
-            //as={NavLink}
+            as={NavLink}
             to="/portfolio"
             className={
               pathName == "/portfolio" ? "header_link_active" : "header_link"
             }
           >
-            Portfolio
+            Portfolio Page
           </Nav.Link>
         </Nav>
 
@@ -81,7 +59,7 @@ const Header = (props) => {
             </a>
           ))}
 
-          {/*<CustomButton text={"Hire Me"} icon={<Telegram />} />*/}
+          <CustomButton text={"Hire Me"} icon={<TelegramIcon />} />
         </div>
       </Navbar.Collapse>
     </Navbar>
